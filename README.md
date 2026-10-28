@@ -6,7 +6,7 @@ This is a customized port of **lhTools**, modified and ported for the Japanese p
 
 ---
 
-## 🚀 Included Tools (X68k Executables)
+## Included Tools (X68k Executables)
 
 - **lhasm.x**: Main Cross-Assembler / BASIC Compiler (Fully Functional)
 - **lhdump.x**: Disassembler / Dump Utility (Fully Functional)
@@ -15,7 +15,7 @@ This is a customized port of **lhTools**, modified and ported for the Japanese p
 
 ---
 
-## 🛠️ Build Environment
+## Build Environment
 
 This port is structured and compiled using the **elf2x68k** cross-development toolchain (`m68k-xelf-gcc` and `elf2x68k.py`). 
 
@@ -27,7 +27,7 @@ make
 
 ---
 
-## 📄 License & Credits
+## License & Credits
 
 ### Original Author
 - **Christophe Gottheimer** <cgh75015@gmail.com> (Copyright 1992-2015)<br>
