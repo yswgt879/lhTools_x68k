@@ -1,6 +1,6 @@
 # lhTools for X68000 (Human68k)
 
-This is a customized port of **lhTools**, modified specifically for the legendary Japanese personal computer **Sharp X68000 (Human68k)**. 
+This is a customized port of **lhTools**, modified and ported for the Japanese personal computer **Sharp X68000 (Human68k)**. 
 
 **lhTools** is a package of cross-development tools for the **Sharp PC-1500** pocket computer (powered by the LH5801 CPU).
 
@@ -30,9 +30,10 @@ make
 ## 📄 License & Credits
 
 ### Original Author
-- **Christophe Gottheimer** <cgh75015@gmail.com> (Copyright 1992-2015)
+- **Christophe Gottheimer** <cgh75015@gmail.com> (Copyright 1992-2015)<br>
+[lhTools - Sharp PC-1500 BASIC compiler/decompiler & LH 5801 assembler/disassembler](http://www.pc1500.com/lhTools.html)
 
-### X68000 Port by
+### X68000 by
 - **Kenoh** (2026)
 
 ### License

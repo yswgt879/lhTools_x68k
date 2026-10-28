@@ -1,14 +1,14 @@
 # lhTools for X68000 (Human68k) 日本語版
 
-本プロジェクトは、Christophe Gottheimer 氏によって開発された **Sharp PC-1500**（LH5801 CPU搭載）向けクロス開発ツール群である **lhTools** を、名機 **Sharp X68000 (Human68k)** 環境へ移植したカスタムバージョンです。
+本プロジェクトは、Christophe Gottheimer 氏によって開発された **Sharp PC-1500**（LH5801 CPU搭載）向けクロス開発ツール群である **lhTools** を、**Sharp X68000 (Human68k)** 環境へ移植したカスタムバージョンです。
 
 ---
 
 ## 🚀 収録ツール（X68k用実行ファイル）
 
-- **lhasm.x**: クロスアセンブラ / BASICコンパイラ本体（完全対応）
-- **lhdump.x**: ディスアセンブラ / ダンプツール（完全対応）
-- **lhpoke.x**: バイナリプログラムを BASIC の POKE 文へ変換するツール（完全対応）
+- **lhasm.x**: クロスアセンブラ / BASICコンパイラ本体
+- **lhdump.x**: ディスアセンブラ / ダンプツール
+- **lhpoke.x**: バイナリプログラムを BASIC の POKE 文へ変換するツール
 - **lhcom.x**: シリアル通信機能（Human68kの環境依存回避のためスタブ化/非対応）
 
 ---
@@ -28,10 +28,11 @@ make
 ## 📄 ライセンス & クレジット
 
 ### 原著者
-- **Christophe Gottheimer** <cgh75015@gmail.com> (Copyright 1992-2015)
+- **Christophe Gottheimer** <cgh75015@gmail.com> (Copyright 1992-2015)<br>
+[lhTools - Sharp PC-1500 BASIC compiler/decompiler & LH 5801 assembler/disassembler](http://www.pc1500.com/lhTools.html)
 
-### X68000移植（ポート）
-- **Kenoh** (2026)
+### X68000移植
+- **けんおう** (2026)
 
 ### ライセンスについて
 本プログラムは **GNU General Public License version 2 (GPL v2) 限定（GPL v2 only）** で公開されています。
