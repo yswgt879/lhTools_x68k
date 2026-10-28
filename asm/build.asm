@@ -1,0 +1,38 @@
+	.ORIGIN: 0680
+	.CODE
+		PUSH	DE
+		CALL	00C5
+		PUSH	DE
+		LDS	(90)
+		STS	(00)
+		CALL	D02B
+		LDPT
+		LDI	(BC)
+		CPA	7C
+		JR	NZ,0696
+		LDA	22
+		STI	(DE)
+		DJC	068F
+		DEC	DE
+		LDA	0D
+		STI	(DE)
+		CALL	066A
+		CALL	F957
+		CALL	CF27
+		ADC	(BC)
+		AND	(BC)
+		STA	B
+		SBC	C
+		LDS	(00)
+		STS	(90)
+		POP	DE
+		RST
+		POP	DE
+		POP	DE
+		LD	H,D0
+		INC	DE
+		ERRH
+
+	.END
+	.SYMBOLS:
+

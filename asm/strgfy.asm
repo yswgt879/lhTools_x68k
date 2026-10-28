@@ -1,0 +1,56 @@
+	.CODE
+
+	abc	.EQU	#1234
+
+	NOP
+	STRINGIFY abc
+	STRINGIFY VALUEOF'abc
+	WORD	[<2][+1]abc
+	STRINGIFY VALUEOF'[<2][+1]abc
+	.IF EXIST? DATE
+	STRINGIFY VALUEOF'DATE
+	.ENDIF
+	WORD	BCDOF'abc
+	WORD	BCDOF'#9876
+	WORD	BCDOF'&abc
+	BYTE	__TIME__$$._hour
+	BYTE	__TIME__$$._minute
+	WORD	__TIME__$$._hm
+	BYTE	BCDOF'__TIME__$$._hour
+	BYTE	BCDOF'__TIME__$$._minute
+	BYTE	BCDOF'__TIME__$$._second
+	WORD	__DATE__$$._year
+	BYTE	__DATE__$$._yy
+	BYTE	__DATE__$$._month
+	BYTE	__DATE__$$._day
+	WORD	__DATE__$$._ymd
+	WORD	BCDOF'__DATE__$$._year
+	BYTE	BCDOF'__DATE__$$._yy
+	BYTE	BCDOF'__DATE__$$._month
+	WORD	BCDOF'__DATE__$$._day
+	TEXT	" MONTH "
+	STRINGIFY MONTHOF'__DATE__$$._month
+	TEXT	" DATE "
+	STRINGIFY VALUEOF'BCD16OF'__DATE__$$._year
+	TEXT	"/"
+	STRINGIFY VALUEOF'BCD8OF'__DATE__$$._month
+	TEXT	"/"
+	STRINGIFY VALUEOF'BCD8OF'__DATE__$$._day
+	TEXT	" TIME "
+	STRINGIFY VALUEOF'BCD8OF'__TIME__$$._hour
+	TEXT	":"
+	STRINGIFY VALUEOF'BCD8OF'__TIME__$$._minute
+
+	TEXT	"    "
+	STRINGIFY VALUE16OF'BCDOF'__TIME__$$._hour
+	STRINGIFY VALUE8OF'BCDOF'__DATE__$$._yy
+
+	TEXT	"VERSION "
+	STRINGIFY VALUEOF'BCDOF'__VERSION__$$._release
+	TEXT	"."
+	STRINGIFY VALUEOF'BCDOF'__VERSION__$$._major
+	TEXT	"."
+	STRINGIFY VALUEOF'BCDOF'__VERSION__$$._minor
+	TEXT	"p"
+	STRINGIFY VALUEOF'BCDOF'__VERSION__$$._patch
+	.END

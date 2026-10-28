@@ -1,0 +1,8 @@
+	.RESERVE
+
+	II.F# "ABC" &40
+	I.F5 &F0 &97 $@
+	III.F1 <CODEOF'"INPUT" >CODEOF'"INPUT"
+	II.F$ BEEP "1"
+
+	.END

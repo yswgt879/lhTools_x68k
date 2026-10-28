@@ -1,0 +1,19 @@
+	.ORIGIN: 40C5
+	.BASIC
+10 CLS :WAIT 0:PRINT "BASIC-1501:GETKEY$"
+20 A=&XXXX:B=&00C5:A=(A*(A<>0))+(E*(A=0)):E=A+&B
+30 H=A:GOSUB 2000:A$=H$:H=E:GOSUB 2000:E$=H$
+99 H=A:GOSUB 2000:PRINT "Chargement du code en ";A$
+100 POKE A+&0,&BE,&E2,&4A,&B7,&0E,&89,&01,&9A,&BA,&D9,&AD
+1000 PRINT "Relocation du code en ";A$
+1100 PRINT "Creation des instructions"
+1101 H=A+&0:GOSUB 2000:REM  BASWORD +"GETKEY$";"5F"+H$+"N"
+1999 BEEP 1:WAIT :PRINT "Adr: Deb &";A$;" Fin &";E$:END 
+2000 H$="":FOR I=1TO 4:G=H/16:H=INT G:G=(G-H)*16:H$=CHR$ ((G>9)*(G+55)+(G<10)*(G+48))+H$
+2010 NEXT I:RETURN 
+2100 H=A+(256*PEEK P)+PEEK (P+1)
+2110 L=H/256:H=INT L:L=(L-H)*256:POKE P,H,L:RETURN 
+
+	.END
+	.SYMBOLS:
+

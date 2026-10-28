@@ -1,0 +1,7 @@
+
+	.IMPORT:	asm/ernerl.keyw
+
+10 ON ERROR GOTO 99
+20 RAISE 100
+30 END
+99 BEEP1: PRINT "Error ";ERL;" in line ";ERL:RESUME

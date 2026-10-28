@@ -1,0 +1,6 @@
+	.ORIGIN: 40C5
+	.CODE
+	LDA	(&65)
+	STA	(>ENDBASIC)
+	SBR	(&E3)
+	.END

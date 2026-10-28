@@ -1,0 +1,18 @@
+lhdump.o: lhdump.c lhtype.h lhfrag.h lhsym.h lhunasm.h lhbasic.h \
+ lhce158hdr.h
+lh5801.o: lh5801.c lhtype.h lh5801.h
+lhbasic.o: lhbasic.c lhtype.h lhbasic.h
+lhfrag.o: lhfrag.c lhtype.h lhfrag.h
+lhsym.o: lhsym.c lhtype.h lhsym.h
+lhunasm.o: lhunasm.c lhtype.h lh5801.h lhsym.h lhunasm.h lhbasic.h
+lhce158hdr.o: lhce158hdr.c lhtype.h lhce158hdr.h
+version.o: version.c
+lhasm.o: lhasm.c lhtype.h lh5801.h lhsym.h lhbasic.h lhfrag.h \
+ lhce158hdr.h
+lh5801.o: lh5801.c lhtype.h lh5801.h
+lhbasic.o: lhbasic.c lhtype.h lhbasic.h
+lhsym.o: lhsym.c lhtype.h lhsym.h
+lhfrag.o: lhfrag.c lhtype.h lhfrag.h
+lhce158hdr.o: lhce158hdr.c lhtype.h lhce158hdr.h
+version.o: version.c
+version.o: version.c

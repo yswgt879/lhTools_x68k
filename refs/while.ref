@@ -1,0 +1,42 @@
+40C5	45                LDI	(BC)
+40C6	8B 05             JR	Z,40CD
+40C8	B9 7F             AND	7F
+40CA	51                STI	(DE)
+40CB	9E 08             JR	40C5
+40CD	38                NOP
+
+40CE	45                LDI	(BC)
+
+40CF	.SKIP	0131
+
+4200	8B 06             JR	Z,4208
+4202	B9 7F             AND	7F
+4204	51                STI	(DE)
+4205	BA 40 CE          JP	40CE
+4208	38                NOP
+
+4209	45                LDI	(BC)
+420A	89 03             JR	NZ,420F
+420C	BA 44 03          JP	4403
+420F	B9 7F             AND	7F
+4211	51                STI	(DE)
+
+4212	.SKIP	01EE
+
+4400	BA 42 09          JP	4209
+4403	38                NOP
+
+4404	45                LDI	(BC)
+
+4405	.SKIP	01FB
+
+4600	89 03             JR	NZ,4605
+4602	BA 48 03          JP	4803
+4605	B9 7F             AND	7F
+4607	51                STI	(DE)
+
+4608	.SKIP	01F8
+
+4800	BA 44 04          JP	4404
+4803	9A                RET
+

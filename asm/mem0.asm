@@ -1,0 +1,14 @@
+	.ORIGIN: 7900
+	.CODE
+		CLA
+		STA	B
+		STA	C
+		STI	(BC)
+		CP	B,48
+		JR	NZ,7903
+		CALL	E669
+		RET
+
+	.END
+	.SYMBOLS:
+

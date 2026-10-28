@@ -1,0 +1,19 @@
+	.ORIGIN: 40C5
+	.CODE
+	.IF	EXIST?	USESYM
+abcd:	CLA
+	.ELSE
+abcd:
+	CLA
+	.ENDIF
+	.IF	EXIST?	USEVAR
+%00a:	RCF
+	.ELSE
+%00a:
+	RCF
+	.ENDIF
+	CALL	abcd
+	LDA	(%00a)
+	SCF
+	RET
+	.END

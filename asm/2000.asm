@@ -1,0 +1,31 @@
+	.ORIGIN: 2000
+	.CODE
+		PUSH	HL
+		LDI	(DE)
+		PUSH	A
+		STA	B
+		BIT	80
+		JR	NZ,2012
+		LDA	(774E)
+		STA	H
+		LDA	(774F)
+		STA	L
+		LDA	B
+		AND	0F
+		STA	B
+		LDI	(DE)
+		STA	C
+		SCF
+		LDA	L
+		SBC	C
+		STA	C
+		LDA	H
+		SBC	B
+		STA	B
+		POP	A
+		POP	HL
+		RET
+
+	.END
+	.SYMBOLS:
+

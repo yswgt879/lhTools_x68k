@@ -1,0 +1,10 @@
+	.CODE
+	RRD
+	RLD
+	RRD#
+	RLD#
+	SLD
+	SRD
+	SLD#
+	SRD#
+	.END

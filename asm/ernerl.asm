@@ -1,0 +1,24 @@
+	.CODE
+
+	.DEFINE: "ERN"	= AUTO.V?F054 N
+		LDA	(ERRORNUM)
+		JP	D9E4
+
+	.DEFINE: "ERL"	= AUTO.V N
+		LDU	(ERRORLINE)
+		JP	DA6C
+
+	.DEFINE: "RAISE"	= AUTO.I?F097 N
+		EVAL	doerr
+		INTG	00,doerr
+		LDA	H
+		STA	H
+		SBR	Z,(&E2)
+	doerr:
+		ERRH
+
+	.DEFINE: "PRINTERR"	= F097 N
+		JP	PRINT\\._jump
+
+	.END
+

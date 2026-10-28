@@ -1,0 +1,30 @@
+40C5	49 00             AND	(BC),00
+40C7	44                INC	BC
+40C8	4E FF             CP	C,FF
+40CA	91 07             JR	NC,40C5
+40CC	38                NOP
+
+40CD	44                INC	BC
+40CE	4E FF             CP	C,FF
+
+40D0	.SKIP	0130
+
+4200	83 03             JR	C,4205
+4202	BA 40 CD          JP	40CD
+4205	38                NOP
+
+4206	34                CLA
+4207	41                STI	(BC)
+4208	88 03             DJC	4207
+420A	38                NOP
+
+420B	34                CLA
+420C	41                STI	(BC)
+
+420D	.SKIP	01F3
+
+4400	62                DEC	L
+4401	81 03             JR	NC,4406
+4403	BA 42 0C          JP	420C
+4406	9A                RET
+

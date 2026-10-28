@@ -1,0 +1,12 @@
+	.ORIGIN: 02FE
+	.CODE
+	CALL	BEEP1
+	RET
+
+	.TEXT
+	"BIP BIP"
+
+	.BYTE
+	00 00
+	.END
+

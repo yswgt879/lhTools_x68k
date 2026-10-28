@@ -1,0 +1,39 @@
+.IF MACHINE?
+.ELSE
+.PC1500
+.ENDIF
+
+.IF MODULE?
+.ELSE
+.CE161
+.ENDIF
+
+.IF MACHINE? PC1560
+.PRINT "Woow, C'est un PC1560"
+.ELSE
+.PRINT "Boooh, un PC1500 tout simple"
+.ENDIF
+
+.IF MODULE? CE161
+.PRINT "Woow, avec un CE161"
+.ELSE
+.PRINT "Boooh, avec ou sans module..."
+.ENDIF
+	.CODE
+	.RAM
+
+	NOP
+
+.IF MACHINE? PC1500A
+	.ORIGIN: 7C10
+	.LM
+
+	.ORIGIN: 7E00
+	.ROM
+.ENDIF
+.IF MACHINE? PC1560
+	.ORIGIN: 8000
+	.ROM
+.ENDIF
+
+.END

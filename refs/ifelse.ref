@@ -1,0 +1,56 @@
+40C5	25                LDA	(HL)
+40C6	89 02             JR	NZ,40CA
+40C8	BD FF             XOR	FF
+40CA	38                NOP
+
+40CB	25                LDA	(HL)
+40CC	8B 03             JR	Z,40D1
+40CE	BA 42 00          JP	4200
+40D1	BD FF             XOR	FF
+
+40D3	.SKIP	012D
+
+4200	38                NOP
+
+4201	25                LDA	(HL)
+4202	89 04             JR	NZ,4208
+4204	BD FF             XOR	FF
+4206	8E 02             JR	420A
+4208	B9 7F             AND	7F
+420A	38                NOP
+
+420B	25                LDA	(HL)
+420C	8B 03             JR	Z,4211
+420E	BA 44 02          JP	4402
+4211	BD FF             XOR	FF
+
+4213	.SKIP	01ED
+
+4400	8E 02             JR	4404
+4402	B9 7F             AND	7F
+4404	38                NOP
+
+4405	25                LDA	(HL)
+4406	89 05             JR	NZ,440D
+4408	BD FF             XOR	FF
+440A	BA 46 00          JP	4600
+440D	B9 7F             AND	7F
+
+440F	.SKIP	01F1
+
+4600	38                NOP
+
+4601	25                LDA	(HL)
+4602	8B 03             JR	Z,4607
+4604	BA 48 05          JP	4805
+
+4607	.SKIP	01F9
+
+4800	BD FF             XOR	FF
+4802	BA 4A 00          JP	4A00
+4805	B9 7F             AND	7F
+
+4807	.SKIP	01F9
+
+4A00	9A                RET
+

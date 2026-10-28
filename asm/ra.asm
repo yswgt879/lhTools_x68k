@@ -1,0 +1,9 @@
+	.ORIGIN: 40c5
+	.CODE
+	LDA	N
+	STA	H
+	STA	L
+	STI	(HL)
+	CP	H,48
+	JR	NC,-05
+	RET
